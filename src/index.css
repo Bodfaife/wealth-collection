@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --wc-cream: #f5f1e8;
+  --wc-charcoal: #0f0f0f;
+  --wc-gold: #c8a96a;
+  --wc-muted: #7a7468;
+  --wc-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--wc-cream);
+  color: var(--wc-charcoal);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--wc-gold);
+  color: var(--wc-charcoal);
+}
+
+/* Luxury typography */
+
+.font-display {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
