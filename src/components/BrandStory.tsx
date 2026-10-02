@@ -15,7 +15,7 @@ export default function BrandStory() {
         className="relative min-h-[500px] overflow-hidden lg:min-h-[700px]"
         >
         <img
-        src="/images/story.jpg"
+        src="/images/images10.jpg"
         alt="Wealth Collection lifestyle"
         className="h-full w-full object-cover"
         />
