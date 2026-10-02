@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import FeaturedDesigns from "./components/FeaturedDesigns";
+import BrandStory from "./components/BrandStory";
 
 export default function App() {
   return (
@@ -10,6 +11,8 @@ export default function App() {
     <HeroSection />
 
     <FeaturedDesigns />
+
+    <BrandStory />
     </main>
   );
 }
