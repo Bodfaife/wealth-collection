@@ -6,25 +6,25 @@ const products = [
         name: "Vintage Essential",
         category: "Vintage Shirts",
         price: "₦35,000",
-        image: "/images/product-1.jpg",
+        image: "/images/images6.jpg",
     },
 {
     name: "The Classic",
     category: "Premium Shirts",
     price: "₦45,000",
-    image: "/images/product-2.jpg",
+    image: "/images/images7.jpg",
 },
 {
     name: "Soft Living",
     category: "Premium Bedding",
     price: "₦85,000",
-    image: "/images/product-3.jpg",
+    image: "/images/images8.jpg",
 },
 {
     name: "Everyday Luxury",
     category: "Elevated Essentials",
     price: "₦55,000",
-    image: "/images/product-4.jpg",
+    image: "/images/images9.jpg",
 },
 ];
 
