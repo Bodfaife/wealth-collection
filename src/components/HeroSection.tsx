@@ -54,7 +54,7 @@ export default function HeroSection() {
         transition={{ duration: 0.9 }}
         className="max-w-3xl text-center"
         >
-        <p className="mb-4 text-sm uppercase tracking-[0.35em] text-[#C8A96A]">
+        <p className="mb-4 text-xl font-bold uppercase tracking-[0.50em] text-white">
         Luxury Fashion & Lifestyle
         </p>
 
