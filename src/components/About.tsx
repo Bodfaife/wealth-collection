@@ -29,7 +29,7 @@ export default function About()
         <p className="text-xs uppercase tracking-[.3em] text-[#C8A96A]">The Wealth Standard</p>
     <h2 className="mt-5 font-[Cormorant_Garamond] text-5xl md:text-7xl">Considered. Characterful. Timeless.</h2>
         <p className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-[#C9C3B8]">We choose pieces for how they feel in real life — not simply how they look on a screen.</p>
-    <a href="/shop" className="mt-9 inline-flex items-center gap-3 text-xs uppercase tracking-[.2em] hover:text-[#C8A96A]">Explore the collection <ArrowRight size={16}/></a>
+    <a href="/Shop" className="mt-9 inline-flex items-center gap-3 text-xs uppercase tracking-[.2em] hover:text-[#C8A96A]">Explore the collection <ArrowRight size={16}/></a>
     </div>
 
     </section>

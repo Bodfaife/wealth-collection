@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import type { Product } from './pages/storeData';
+import type { Product } from './components/storeData';
 
 type CartItem={product:Product;quantity:number};
 type CartContextType={items:CartItem[];

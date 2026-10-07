@@ -5,7 +5,7 @@ import { formatPrice } from './storeData';
 export default function Cart()
 {
     const {items,subtotal,update,remove}=useCart();
-    return
+    return (
     <main className="min-h-[70vh] bg-[#F5F1E8] px-6 py-16 md:px-10 md:py-24">
 
     <div className="mx-auto max-w-5xl">
@@ -22,7 +22,7 @@ export default function Cart()
         <p className="font-[Cormorant_Garamond] text-3xl"> Your bag is quiet.
         </p>
 
-        <a href="/shop"
+        <a href="/Shop"
         className="mt-7 inline-flex rounded-full bg-[#171717] px-7 py-3 text-xs uppercase tracking-[.18em] text-[#F5F1E8]">
         Explore the Collection
         </a>
@@ -99,4 +99,6 @@ export default function Cart()
 
     }
     </div>
-    </main>}
+    </main>
+    );
+}

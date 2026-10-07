@@ -33,7 +33,7 @@ const data=
 export default function FAQ()
 {
     const [open,setOpen]=useState<number|null>(0);
-    return
+    return (
     <main className="bg-[#F5F1E8] px-6 py-20 md:px-10 md:py-28">
 
     <div className="mx-auto max-w-4xl">
@@ -74,5 +74,6 @@ export default function FAQ()
         </div>
     </div>
     </main>
+    );
 
 }
