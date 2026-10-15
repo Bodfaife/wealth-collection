@@ -8,6 +8,7 @@ import EditorialSection from "./components/EditorialSection";
 import Testimonials from "./components/Testimonials";
 import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+
 import Shop from "./components/Shop";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
@@ -32,18 +33,19 @@ function Home() {
 }
 
 function RoutedPage() {
-  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  const path =
+  window.location.pathname.replace(/\/+$/, "").toLowerCase() || "/";
 
   if (path === "/") {
     return <Home />;
   }
 
-  if (path === "/Shop") {
+  if (path === "/shop") {
     return <Shop />;
   }
 
   if (path.startsWith("/product/")) {
-    const id = path.split("/")[2];
+    const id = window.location.pathname.split("/")[2];
 
     if (id) {
       return <Product id={id} />;
@@ -56,11 +58,11 @@ function RoutedPage() {
     return <Cart />;
   }
 
-  if (path === "/About") {
+  if (path === "/about") {
     return <About />;
   }
 
-  if (path === "/Contact") {
+  if (path === "/contact") {
     return <Contact />;
   }
 
@@ -88,9 +90,7 @@ export default function App() {
     <CartProvider>
     <main className="min-h-screen bg-[#F5F1E8] text-[#171717]">
     <Navbar />
-
     <RoutedPage />
-
     <Footer />
     </main>
     </CartProvider>

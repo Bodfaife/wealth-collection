@@ -13,6 +13,11 @@ const cats = [
 export default function Shop() {
     const [cat, setCat] = useState("All");
     const [sort, setSort] = useState("featured");
+    const searchQuery = (
+        new URLSearchParams(window.location.search).get("search") || ""
+    )
+    .toLowerCase()
+    .trim();
 
     const list = useMemo(() => {
         let a =
@@ -20,16 +25,17 @@ export default function Shop() {
         ? [...products]
         : products.filter((p) => p.category === cat);
 
-        if (sort === "low") {
-            a.sort((x, y) => x.price - y.price);
-        }
-
-        if (sort === "high") {
-            a.sort((x, y) => y.price - x.price);
+        if (searchQuery) {
+            a = a.filter(
+                (p) =>
+                p.name.toLowerCase().includes(searchQuery) ||
+                p.category.toLowerCase().includes(searchQuery) ||
+                p.description.toLowerCase().includes(searchQuery)
+            );
         }
 
         return a;
-    }, [cat, sort]);
+    }, [cat, sort, searchQuery]);
 
     return (
         <main className="bg-[#F5F1E8] text-[#171717]">
@@ -77,6 +83,30 @@ export default function Shop() {
         <option value="high">Price: High to Low</option>
         </select>
         </div>
+
+        {searchQuery && (
+            <div className="mt-8 flex items-center justify-between">
+            <p className="text-sm text-[#68645D]">
+            Results for "{searchQuery}"
+            </p>
+            <button
+            onClick={() => {
+                window.history.replaceState({}, "", "/shop");
+                window.dispatchEvent(new PopStateEvent("popstate"));
+                window.location.href = "/shop";
+            }}
+            className="text-xs uppercase tracking-widest underline"
+            >
+            Clear search
+            </button>
+            </div>
+        )}
+
+        {list.length === 0 && (
+            <p className="py-20 text-center text-[#68645D]">
+            No products found. Try another search.
+            </p>
+        )}
 
         <div className="mt-10 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((p, i) => (
